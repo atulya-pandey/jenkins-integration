@@ -6,5 +6,11 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        
+        stage('list buckets') {
+            steps {
+                sh 'aws s3 ls'
+            }
+        }
     }
 }
